@@ -11,9 +11,31 @@ const NavBar = ({handleSection, clicked, section}) => {
             <Container fluid>
                 <Row>
                     <Col><div className='page-title'>Test Code Portfolio</div></Col>
-                    <Col><Button className='section-click' onClick={() => handleSection('bootstrap-table')}>{clicked && section ==='bootstrap-table' ? 'Close' : 'Bootstrap Table'}</Button></Col>
-                    <Col><Button className='section-click' onClick={() => handleSection('API-call')}>{clicked && section ==='API-call' ? 'Close' : 'API Call'}</Button></Col>
-                    <Col><Button className='section-click' onClick={() => handleSection('carousel')}>{clicked && section ==='carousel' ? 'Close' : 'Carousel'}</Button></Col>
+                    <Col><Button 
+                            className='section-click' 
+                            onClick={() => handleSection('bootstrap-table')}
+                            disabled={clicked && section !== 'bootstrap-table'}
+                        >
+                                {clicked && section ==='bootstrap-table' ? 'Close' : 'Bootstrap Table'}
+                        </Button>
+                    </Col>
+                    <Col><Button 
+                            className='section-click' 
+                            onClick={() => handleSection('API-call')}
+                            disabled={clicked && section !== 'API-call'}
+                        >
+                            {clicked && section ==='API-call' ? 'Close' : 'API Call'}
+                        </Button>
+                    </Col>
+                    <Col>
+                        <Button 
+                            className='section-click' 
+                            onClick={() => handleSection('carousel')}
+                            disabled={clicked && section !== 'carousel'}
+                        >
+                            {clicked && section ==='carousel' ? 'Close' : 'Carousel'}
+                        </Button>
+                    </Col>
                 </Row>
             </Container>
         </div>
