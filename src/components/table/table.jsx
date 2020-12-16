@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './table.css';
 import Container from 'react-bootstrap/Container'
 import { Table } from 'react-bootstrap';
 
-const TableComponent = () => {
+const TableComponent = ({section}) => {
+
     return (
         <div className='table-component'>
             <Container>
+                <div className='table-title'>Bootstrap Table</div>
                 <Table striped bordered hover responsive className='table' size='sm' variant='dark'>
                     <thead>
                         <tr>

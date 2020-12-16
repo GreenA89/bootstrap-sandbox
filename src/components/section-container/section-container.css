@@ -1,0 +1,15 @@
+.section-container {
+    border: 1px solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hide {
+    height: 0;
+    transition: height 0.3s ease-in;
+}
+
+.show {
+    height: 92.3vh;
+    transition: height 0.3s ease-in;
+}

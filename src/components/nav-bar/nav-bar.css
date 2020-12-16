@@ -1,0 +1,7 @@
+.nav-bar {
+    border: 2px solid;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
