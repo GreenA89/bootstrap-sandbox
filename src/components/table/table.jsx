@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './table.css';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
 import { Table } from 'react-bootstrap';
 
 const TableComponent = ({section}) => {
