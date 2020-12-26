@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './carousel.css';
 import Container from 'react-bootstrap/Container';
+import Slider from '../slider/slider';
 
 const Carousel = () => {
 
@@ -30,6 +31,7 @@ const Carousel = () => {
                     <input type='text' onChange={(e) => setQuery(e.target.value)} />
                     <input type='submit' value='Search!' />
                 </form>
+                <Slider images={images} />
             </Container>            
         </div>
     )
