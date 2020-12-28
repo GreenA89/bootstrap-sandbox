@@ -7,7 +7,20 @@ const Carousel = () => {
 
     const [query, setQuery] = useState('');
     const [images, setImages] = useState([]);
+    const [index, setIndex] = useState(0);
 
+    const slideRight = () => {
+        setIndex((index + 1) % images.length);
+    };
+
+    const slideLeft = () => {
+        const nextIndex = index - 1;
+        if (nextIndex < 0) {
+            setIndex(images.length - 1);
+        } else {
+            setIndex(nextIndex);
+        }
+    };
     const handleSubmit = (e) => {
         e.preventDefault();
         const APIKey = '19640678-9ae7a1d59e65155a51453ef99'
@@ -31,7 +44,9 @@ const Carousel = () => {
                     <input type='text' onChange={(e) => setQuery(e.target.value)} />
                     <input type='submit' value='Search!' />
                 </form>
-                <Slider images={images} />
+                <button onClick={slideLeft}>{'Prev'}</button>
+                <button onClick={slideRight}>{'Next'}</button>
+                <Slider images={images} index={index} />
             </Container>            
         </div>
     )

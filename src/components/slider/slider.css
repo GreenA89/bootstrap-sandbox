@@ -1,0 +1,28 @@
+.cards-slider {
+    position: relative;
+    margin: 0 auto;
+    max-height: 450px;
+    max-width: 620px;
+}
+
+.cards-slider:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: 5px solid blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    max-width:620px;
+    max-height:380px;
+    flex: 1;
+}
