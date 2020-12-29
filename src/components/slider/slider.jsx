@@ -3,16 +3,17 @@ import './slider.css';
 
 const Slider = ({images, index}) => {
 
+    console.log(index*(100/images.length));
+
     return (
         images.length > 0 &&
         <div className='cards-slider'>
-            <div className='cards-slider-wrapper'>
-                <div className='slider'>
-                    {
-                        images.map(image => <img src={image} alt={image} key={image} />)
-                    }
-                    {/* <img src={images[index]} alt={images[index]}></img> */}
-                </div>
+            <div className='cards-slider-wrapper' style={{
+                transform: `translateX(-${index*(100/images.length)}%)`
+                }}>
+                {
+                    images.map(image => <img src={image} alt={image} key={image} />)
+                }
             </div>
         </div>
     )
