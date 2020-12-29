@@ -29,9 +29,12 @@ const Carousel = () => {
         )
         .then((response) => response.json())
         .then(({ hits }) => hits.map(({ webformatURL }) => webformatURL))
-        .then(setImages);
-        console.log(query);
-        console.log(images)
+        .then(setImages)
+        .catch(error => {
+            console.log(error)
+            alert('Error! Try Again!')
+        });
+        setIndex(0);
     };
 
     
