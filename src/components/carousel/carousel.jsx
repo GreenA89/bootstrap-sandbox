@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import './carousel.css';
 import Container from 'react-bootstrap/Container';
 import Slider from '../slider/slider';
+import Form from 'react-bootstrap/Form';
+import Badge from 'react-bootstrap/Badge'
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Carousel = () => {
 
@@ -42,13 +47,22 @@ const Carousel = () => {
     return (
         <div className='carousel'>
             <Container fluid>
-                <p>Carousel</p>
-                <form onSubmit={handleSubmit} >
-                    <input type='text' onChange={(e) => setQuery(e.target.value)} />
-                    <input type='submit' value='Search!' />
-                </form>
-                <button onClick={slideLeft}>{'Prev'}</button>
-                <button onClick={slideRight}>{'Next'}</button>
+                <h1><Badge variant='secondary'>Carousel</Badge></h1>
+                <Form onSubmit={handleSubmit} >
+                    <Form.Group controlID='formSearch'>
+                        <Form.Control type='text' onChange={(e) => setQuery(e.target.value)} />
+                        <Form.Text className='text-muted'>Search for any category of images to view</Form.Text>
+                        <Button as='input' type='submit' value='Search!' block/>{''}
+                    </Form.Group>
+                </Form>
+                <Row>
+                    <Col>
+                        <Button onClick={slideLeft}>{'Prev'}</Button>
+                    </Col>
+                    <Col>
+                        <Button onClick={slideRight}>{'Next'}</Button>
+                    </Col>
+                </Row>
                 <Slider images={images} index={index} />
             </Container>            
         </div>

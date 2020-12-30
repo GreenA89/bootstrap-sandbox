@@ -4,13 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button'
+import Badge from 'react-bootstrap/Badge'
 
 const NavBar = ({handleSection, clicked, section}) => {
     return (
         <div className='nav-bar'>
             <Container fluid>
                 <Row>
-                    <Col><div className='page-title'>Test Code Portfolio</div></Col>
+                    <Col><h1><Badge variant='secondary'>Test Code Portfolio</Badge></h1></Col>
                     <Col><Button 
                             className='section-click' 
                             onClick={() => handleSection('bootstrap-table')}
@@ -21,10 +22,10 @@ const NavBar = ({handleSection, clicked, section}) => {
                     </Col>
                     <Col><Button 
                             className='section-click' 
-                            onClick={() => handleSection('API-call')}
-                            disabled={clicked && section !== 'API-call'}
+                            onClick={() => handleSection('reddit-api')}
+                            disabled={clicked && section !== 'reddit-api'}
                         >
-                            {clicked && section ==='API-call' ? 'Close' : 'API Call'}
+                            {clicked && section ==='reddit-api' ? 'Close' : 'Reddit API'}
                         </Button>
                     </Col>
                     <Col>

@@ -1,0 +1,44 @@
+.reddit-api {
+    margin-top: 50px;
+    overflow: scroll;
+}
+
+.form {
+    margin-bottom: 50px;
+}
+
+.subreddit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 200px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid;
+    margin-bottom: 20px;
+}
+
+.reddit-description {
+    margin-top: 10px;
+    border: 1px solid;
+    height: 180px;
+    overflow: scroll;
+    width: calc((100% / 5) * 2);
+}
+
+.reddit-title, .reddit-url {
+    width: calc(100% / 5);
+    margin-top: 10px
+}
+
+.reddit-image {
+    width: calc(100% / 5);
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.results {
+    height: 650px;
+    width: 100%;
+    overflow: scroll;
+}
